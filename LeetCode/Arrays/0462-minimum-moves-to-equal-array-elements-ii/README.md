@@ -1,6 +1,6 @@
 # 462. Minimum Moves to Equal Array Elements II
 
-> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Medium` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/submissions/)
+> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Medium` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/)
 
 ---
 
