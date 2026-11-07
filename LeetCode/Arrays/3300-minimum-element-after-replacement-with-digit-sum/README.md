@@ -1,6 +1,6 @@
 # 3300. Minimum Element After Replacement With Digit Sum
 
-> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/submissions/2191319623/)
+> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/)
 
 ---
 
@@ -56,7 +56,7 @@ Return the **minimum** element in `nums` after all replacements.
 
 ## Complexity Analysis
 
-- **Time Complexity:** `O(N) — Linear scan through the input`
+- **Time Complexity:** `O(N²) — Nested loop traversal`
 - **Space Complexity:** `O(N) — Auxiliary data structure storage`
 
 ---
@@ -69,14 +69,24 @@ Return the **minimum** element in `nums` after all replacements.
 class Solution {
 public:
     int minElement(vector<int>& nums) {
-        int a = *min_element(nums.begin(),nums.end());
-        int sum = 0;
-        while(a>0) {
-            int digit = a % 10;
-            sum = sum + digit;
-            a = a/10;
+        int minimum = INT_MAX;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int n = nums[i];
+            int sum = 0;
+
+            while (n > 0) {
+                int digit = n % 10;
+                sum = sum + digit;
+                n = n / 10;
+            }
+
+            if (sum < minimum) {
+                minimum = sum;
+            }
         }
-        return sum;
+
+        return minimum;
     }
 };
 ```

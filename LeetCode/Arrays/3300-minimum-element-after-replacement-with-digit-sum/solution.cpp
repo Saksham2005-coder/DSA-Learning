@@ -1,13 +1,23 @@
 class Solution {
 public:
     int minElement(vector<int>& nums) {
-        int a = *min_element(nums.begin(),nums.end());
-        int sum = 0;
-        while(a>0) {
-            int digit = a % 10;
-            sum = sum + digit;
-            a = a/10;
+        int minimum = INT_MAX;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int n = nums[i];
+            int sum = 0;
+
+            while (n > 0) {
+                int digit = n % 10;
+                sum = sum + digit;
+                n = n / 10;
+            }
+
+            if (sum < minimum) {
+                minimum = sum;
+            }
         }
-        return sum;
+
+        return minimum;
     }
 };
