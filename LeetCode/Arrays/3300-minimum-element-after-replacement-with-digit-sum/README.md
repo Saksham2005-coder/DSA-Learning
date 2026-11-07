@@ -1,6 +1,6 @@
 # 3300. Minimum Element After Replacement With Digit Sum
 
-> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/)
+> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/submissions/2191319623/)
 
 ---
 
