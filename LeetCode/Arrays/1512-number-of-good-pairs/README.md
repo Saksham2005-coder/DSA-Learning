@@ -60,7 +60,8 @@ Output: 0
 class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
-        int count
+        int count = 0;
+        
     }
 };
 ```
