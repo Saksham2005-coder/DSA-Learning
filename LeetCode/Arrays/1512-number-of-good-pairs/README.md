@@ -1,6 +1,6 @@
 # 1512. Number of Good Pairs
 
-> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/number-of-good-pairs/description/)
+> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/number-of-good-pairs/)
 
 ---
 
@@ -60,7 +60,7 @@ Output: 0
 class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
-        
+        int count
     }
 };
 ```
