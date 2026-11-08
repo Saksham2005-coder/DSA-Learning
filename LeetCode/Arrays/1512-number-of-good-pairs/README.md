@@ -1,6 +1,6 @@
 # 1512. Number of Good Pairs
 
-> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/number-of-good-pairs/)
+> **Platform:** `LeetCode` | **Topic:** `Arrays` | **Difficulty:** `Easy` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/number-of-good-pairs/submissions/2192040899/)
 
 ---
 
@@ -47,7 +47,7 @@ Output: 0
 
 ## Complexity Analysis
 
-- **Time Complexity:** `O(N) — Linear scan through the input`
+- **Time Complexity:** `O(N²) — Nested loop traversal`
 - **Space Complexity:** `O(N) — Auxiliary data structure storage`
 
 ---
@@ -61,7 +61,14 @@ class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
         int count = 0;
-        
+        int n= nums.size();
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                if(nums[i]==nums[j] && i<j)
+                count++;
+            }
+        }
+        return count;
     }
 };
 ```
