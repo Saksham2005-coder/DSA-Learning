@@ -1,6 +1,6 @@
 # 3789. Minimum Cost to Acquire Required Items
 
-> **Platform:** `LeetCode` | **Topic:** `Math` | **Difficulty:** `Medium` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-cost-to-acquire-required-items/?envType=daily-question&envId=2026-11-11)
+> **Platform:** `LeetCode` | **Topic:** `Math` | **Difficulty:** `Medium` | **Languages:** `CPP` | [Problem Link](https://leetcode.com/problems/minimum-cost-to-acquire-required-items/submissions/2194037172/?envType=daily-question&envId=2026-11-11)
 
 ---
 
@@ -80,7 +80,17 @@ Since no items are required (`need1 = need2 = 0`), we buy nothing and pay 0.
 class Solution {
 public:
     long long minimumCost(int cost1, int cost2, int costBoth, int need1, int need2) {
-        long long option1 = (long long)need1 * cost1+ (long long)need2 * cost2;
+        long long option1 = (long long)need1 * cost1 + (long long)need2 * cost2;
+
+        long long common = min(need1, need2);
+
+        long long option2 = common * costBoth;
+        option2 += (long long)(need1 - common) * cost1;
+        option2 += (long long)(need2 - common) * cost2;
+
+        long long option3 = (long long)max(need1, need2) * costBoth;
+
+        return min(option1, min(option2, option3));
     }
 };
 ```
