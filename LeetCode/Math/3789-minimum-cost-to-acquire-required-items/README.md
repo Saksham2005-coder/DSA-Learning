@@ -80,8 +80,7 @@ Since no items are required (`need1 = need2 = 0`), we buy nothing and pay 0.
 class Solution {
 public:
     long long minimumCost(int cost1, int cost2, int costBoth, int need1, int need2) {
-        long long option1 = (long long)need1 * cost1
-                         + (long long)need2 * cost2;
+        long long option1 = (long long)need1 * cost1+ (long long)need2 * cost2;
     }
 };
 ```
